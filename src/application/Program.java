@@ -3,6 +3,8 @@ package application;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+import model.dao.DaoFactory;
+import model.dao.SellerDao;
 import model.entities.Department;
 import model.entities.Seller;
 
@@ -20,6 +22,8 @@ public class Program {
 			"pete@gmail.com",
 			new Date(),2000.0, obj);
 	
+		SellerDao sld = DaoFactory.createSellerDao();
+		
 		System.out.println(seller);
 		
 	}
